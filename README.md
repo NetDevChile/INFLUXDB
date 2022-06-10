@@ -163,7 +163,7 @@ services:
       - /etc/localtime:/etc/localtime:ro
    command: -config /etc/influxdb/influxdb.conf
    networks:
-      - i40sys
+      - dockerlink
 networks:
  dockerlink:
    external:
