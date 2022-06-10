@@ -3,18 +3,21 @@ Matrix or Data Base
 
 ######################## Crear Carpetas #######################
 
-'''
+```
 mkdir -p /docker-data/influx1/etc
 mkdir -p /docker-data/influx1/backup				
 mkdir -p /data/influx1
-'''
+```
 
 ####################### Configurar influxdb.conf ###################
 
+```
 nano /docker-data/influx1/etc/influxdb.conf
+```
 
 ---------------------- Archivo influxdb.conf --------------------
 
+```
 reporting-disabled = false
 bind-address = "127.0.0.1:8088"
 [meta]
@@ -127,12 +130,14 @@ dir = "/var/lib/influxdb/data"
   log-enabled = true
   enabled = true
   run-interval = "1s"
-
+```
 
 ####################### Crear Red de Docker ###################
 
+```
 docker network ls
 docker network create i40sys
+```
 
 ####################### Crear Docker-compose ##################
 
