@@ -1,7 +1,7 @@
 # INFLUXDB
 Matrix or Data Base
 
-
+´´´
 ######################## Crear Carpetas #######################
 
 mkdir -p /docker-data/influx1/etc
@@ -195,4 +195,5 @@ CREATE DATABASE "telegraf" WITH DURATION 4w1d REPLICATION 1 NAME "one_month"
   grant read on "telegraf" to "telegraf_r";
   grant write on "telegraf" to "telegraf_w";
 
-show users
+$ show users
+´´´
