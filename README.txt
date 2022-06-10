@@ -166,7 +166,7 @@ docker-compose up
 
 docker exec -ti influx1 /usr/bin/influx
 
-create user "admin" with password '2be1pir8' with all privileges;
+create user "admin" with password 'password' with all privileges;
 
 #################### ejecutar docker ##########################
 
@@ -185,8 +185,8 @@ CREATE DATABASE "telegraf" WITH DURATION 4w1d REPLICATION 1 NAME "one_month"
   
   SHOW RETENTION POLICIES
   
-  create user "telegraf_r" with password '2be1pir8';
-  create user "telegraf_w" with password '2be1pir8';
+  create user "telegraf_r" with password 'password';
+  create user "telegraf_w" with password 'password';
   
   grant read on "telegraf" to "telegraf_r";
   grant write on "telegraf" to "telegraf_w";
