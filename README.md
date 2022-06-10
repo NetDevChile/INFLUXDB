@@ -145,7 +145,7 @@ docker network create i40sys
 nano /docker-data/influx1/docker-compose.yml
 ```
 
----------------------- Archivo docker-compose ----------------
+---------------------- Archivo docker-compose.yml ----------------
 
 ```
 version: '3.8'
@@ -193,7 +193,7 @@ docker restart influx1
 docker exec -ti influx1 /usr/bin/influx
 ```
 
--------------------- crear base de dato -----------------------
+-------------------- crear base de datos -----------------------
 
 ```
   auth
