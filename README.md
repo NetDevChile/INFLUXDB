@@ -141,10 +141,13 @@ docker network create i40sys
 
 ####################### Crear Docker-compose ##################
 
+```
 nano /docker-data/influx1/docker-compose.yml
+```
 
 ---------------------- Archivo docker-compose ----------------
 
+```
 version: '3.8'
 services:
  influx1:
@@ -165,40 +168,49 @@ networks:
  i40sys:
    external:
      name: i40sys
+```
 
 #################### ejecutamos docker-compose ##############
 
+```
 cd /docker-data/influx1/
 
 docker-compose up 
+```
 
 #################### En otra terminal #######################
 
+```
 docker exec -ti influx1 /usr/bin/influx
 
-create user "admin" with password '2be1pir8' with all privileges;
+create user "admin" with password 'password' with all privileges;
+```
 
 #################### ejecutar docker ##########################
 
+```
 docker restart influx1
 docker exec -ti influx1 /usr/bin/influx
+```
 
 -------------------- crear base de dato -----------------------
 
+```
   auth
   admin
-  2be1pir8
-
+  password
+  
 CREATE DATABASE "telegraf" WITH DURATION 4w1d REPLICATION 1 NAME "one_month"
   show databases
   use telegraf
   
   SHOW RETENTION POLICIES
   
-  create user "telegraf_r" with password '2be1pir8';
-  create user "telegraf_w" with password '2be1pir8';
+  create user "telegraf_r" with password 'password';
+  create user "telegraf_w" with password 'password';
   
   grant read on "telegraf" to "telegraf_r";
   grant write on "telegraf" to "telegraf_w";
 
 $ show users
+```
