@@ -3,9 +3,11 @@ Matrix or Data Base
 
 ######################## Crear Carpetas #######################
 
+´´´
 mkdir -p /docker-data/influx1/etc
 mkdir -p /docker-data/influx1/backup				
 mkdir -p /data/influx1
+´´´
 
 ####################### Configurar influxdb.conf ###################
 
