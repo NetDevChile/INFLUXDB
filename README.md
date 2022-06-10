@@ -136,7 +136,7 @@ dir = "/var/lib/influxdb/data"
 
 ```
 docker network ls
-docker network create i40sys
+docker network create dockerlink
 ```
 
 ####################### Crear Docker-compose ##################
@@ -165,9 +165,9 @@ services:
    networks:
       - i40sys
 networks:
- i40sys:
+ dockerlink:
    external:
-     name: i40sys
+     name: dockerlink
 ```
 
 #################### ejecutamos docker-compose ##############
